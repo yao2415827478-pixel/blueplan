@@ -37,9 +37,9 @@ const API_CONFIG = {
   },
 
   // ===== 支付宝支付 API =====
-  // 配置您的支付宝API地址
+  // 配置您的支付宝API地址（通过Nginx代理）
   alipay: {
-    baseUrl: 'http://120.27.139.123:3000', // 您的后端API地址
+    baseUrl: 'http://120.27.139.123', // 通过Nginx代理访问
     createOrder: '/alipay/create-order', // 创建订单
     queryOrder: '/alipay/query-order', // 查询订单状态
     notifyUrl: '/alipay-notify' // 支付回调通知
