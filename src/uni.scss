@@ -1,0 +1,50 @@
+// Uniapp全局样式配置
+
+// 主题色
+$primary-color: #3B82F6;
+$secondary-color: #6366F1;
+$accent-color: #8B5CF6;
+$danger-color: #EF4444;
+$success-color: #10B981;
+
+// 背景色
+$bg-dark: #000000;
+$bg-dark-secondary: #0F172A;
+$bg-card: rgba(255, 255, 255, 0.05);
+
+// 文字色
+$text-primary: #F8FAFC;
+$text-secondary: #94A3B8;
+$text-tertiary: #64748B;
+
+// 边框色
+$border-color: rgba(255, 255, 255, 0.1);
+$border-highlight: rgba(255, 255, 255, 0.2);
+
+// 间距
+$spacing-xs: 12rpx;
+$spacing-sm: 24rpx;
+$spacing-md: 32rpx;
+$spacing-lg: 48rpx;
+$spacing-xl: 64rpx;
+
+// 圆角
+$radius-sm: 12rpx;
+$radius-md: 16rpx;
+$radius-lg: 24rpx;
+$radius-xl: 32rpx;
+$radius-full: 9999rpx;
+
+// 字体大小
+$font-xs: 24rpx;
+$font-sm: 26rpx;
+$font-md: 28rpx;
+$font-lg: 32rpx;
+$font-xl: 40rpx;
+$font-xxl: 56rpx;
+
+// 字体粗细
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
