@@ -1,8 +1,5 @@
 {
   "appId": "com.blueplan.app",
   "appName": "布鲁计划",
-  "webDir": "dist",
-  "server": {
-    "android": "http://120.27.139.123"
-  }
+  "webDir": "dist"
 }

@@ -25,7 +25,7 @@ const ALIPAY_CONFIG = {
   alipayPublicKey: process.env.ALIPAY_PUBLIC_KEY || 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3BYEZ1oYVzkPZg9NH5PrPkQZHj0sJV4/KWl8kdmAxLWQEvzLOaZUAIbSQ7+4kKpvhaMrYrsQtzFbCKsLQE1kQ4YjE+IpNEOwBcF6rk1JbDXU4VyOT4+A9KNLkF7VpKHu1DTq4HNccn++e6T6qa7nNlQB3/O/6l7ZMcrVnp7fxq+0+U1ik6wrECa/GtdeyEwclq3L7TYHHrmhoWQjTmsKAW20X7Quv5ZH6KWQrXhuVY0N8EeGXcEk4xwpYvebpsnJy4v2VfWTZiTbjbIK04zzUFLLlKy3a/Empz2dSLz5dKpptusBcum1YwTVTqmJXPxc9GXT1EdUVFEZJcwm4eVXOwIDAQAB',
   gateway: process.env.ALIPAY_GATEWAY || 'https://openapi.alipay.com/gateway.do',
   notifyUrl: process.env.ALIPAY_NOTIFY_URL || 'https://blue-plan1.cn/alipay-notify',
-  returnUrl: process.env.ALIPAY_RETURN_URL || 'https://blue-plan1.cn/payment-result'
+  returnUrl: process.env.ALIPAY_RETURN_URL || 'https://blue-plan1.cn/alipay-return'
 };
 
 // 内存数据库（简化）

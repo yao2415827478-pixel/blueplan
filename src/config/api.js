@@ -6,13 +6,13 @@ const API_CONFIG = {
   // 配置您的数据库API地址
   // 示例: 'http://120.27.139.123:3000' 或 'http://blue-plan1.cn:3000'
   database: {
-    baseUrl: 'http://120.27.139.123:3000'
+    baseUrl: 'http://localhost:3000'
   },
 
   // ===== 短信验证码 API (阿里云) =====
   // 您的阿里云短信服务API
   smsApi: {
-    baseUrl: 'http://120.27.139.123:3000', // 后端API地址
+    baseUrl: 'http://localhost:3000', // 后端API地址
     sendCode: '/send-sms-code',      // 发送验证码接口
     verifyCode: '/verify-sms-code'   // 验证验证码接口
   },
@@ -37,9 +37,9 @@ const API_CONFIG = {
   },
 
   // ===== 支付宝支付 API =====
-  // 配置您的支付宝API地址（通过Nginx代理）
+  // 配置您的支付宝API地址
   alipay: {
-    baseUrl: 'http://120.27.139.123', // 通过Nginx代理访问
+    baseUrl: 'http://localhost:3000', // 您的后端API地址
     createOrder: '/alipay/create-order', // 创建订单
     queryOrder: '/alipay/query-order', // 查询订单状态
     notifyUrl: '/alipay-notify' // 支付回调通知
