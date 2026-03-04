@@ -67,7 +67,7 @@ const ALIPAY_CONFIG = {
   alipayPublicKey: process.env.ALIPAY_PUBLIC_KEY || 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3BYEZ1oYVzkPZg9NH5PrPkQZHj0sJV4/KWl8kdmAxLWQEvzLOaZUAIbSQ7+4kKpvhaMrYrsQtzFbCKsLQE1kQ4YjE+IpNEOwBcF6rk1JbDXU4VyOT4+A9KNLkF7VpKHu1DTq4HNccn++e6T6qa7nNlQB3/O/6l7ZMcrVnp7fxq+0+U1ik6wrECa/GtdeyEwclq3L7TYHHrmhoWQjTmsKAW20X7Quv5ZH6KWQrXhuVY0N8EeGXcEk4xwpYvebpsnJy4v2VfWTZiTbjbIK04zzUFLLlKy3a/Empz2dSLz5dKpptusBcum1YwTVTqmJXPxc9GXT1EdUVFEZJcwm4eVXOwIDAQAB',
   gateway: process.env.ALIPAY_GATEWAY || 'https://openapi.alipay.com/gateway.do',
   notifyUrl: process.env.ALIPAY_NOTIFY_URL || 'https://blue-plan1.cn/alipay-notify',
-  returnUrl: process.env.ALIPAY_RETURN_URL || 'https://blue-plan1.cn/payment-result'
+  returnUrl: process.env.ALIPAY_RETURN_URL || 'https://blue-plan1.cn/alipay-return'
 };
 
 // ==================== MySQL数据库配�?====================
@@ -657,12 +657,13 @@ try {
             bizContent: {
               out_trade_no: orderId,
               total_amount: amount,
-              subject: subject || '布鲁计划充�?,
+              subject: subject || '布鲁计划充值',
               product_code: 'FAST_INSTANT_TRADE_PAY'
             }
           },
           {
-            notifyUrl: ALIPAY_CONFIG.notifyUrl
+            notifyUrl: ALIPAY_CONFIG.notifyUrl,
+            returnUrl: ALIPAY_CONFIG.returnUrl
           }
         );
         orderStr = result;
@@ -691,7 +692,25 @@ try {
   }
 });
 
-// 支付宝回�?app.post('/alipay-notify', (req, res) => {
+// 支付宝授权回调（同步返回）
+app.get('/alipay-return', (req, res) => {
+  try {
+    const { out_trade_no, trade_no, trade_status } = req.query;
+
+    console.log(`支付宝同步回调: ${out_trade_no}, 状态: ${trade_status}`);
+
+    // 跳转到前端支付结果页面
+    const success = trade_status === 'TRADE_SUCCESS' || trade_status === 'TRADE_FINISHED';
+    const redirectUrl = `/payment-result?orderId=${out_trade_no}&status=${success ? 'success' : 'failed'}`;
+
+    res.redirect(redirectUrl);
+  } catch (error) {
+    console.error('支付宝同步回调处理失败:', error);
+    res.redirect('/payment-result?status=failed');
+  }
+});
+
+// 支付宝异步通知app.post('/alipay-notify', (req, res) => {
   try {
     const { out_trade_no, trade_no, trade_status } = req.body;
 

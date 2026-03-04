@@ -157,8 +157,21 @@ const createAlipayOrder = async (orderInfo) => {
           }
         }
       } else {
-        // 在浏览器环境中，展示支付链接或提示
+        // 在浏览器环境中，尝试使用H5支付或显示支付链接
         console.log('浏览器环境，订单已创建:', data.orderId)
+
+        // 检查是否返回了可以直接跳转的支付链接
+        if (orderStr && orderStr.startsWith('https://')) {
+          // 如果返回的是URL，直接跳转
+          window.location.href = orderStr
+          return {
+            success: true,
+            orderId: data.orderId,
+            redirecting: true,
+            message: '正在跳转到支付宝...'
+          }
+        }
+
         return {
           success: true,
           orderId: data.orderId,

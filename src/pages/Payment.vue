@@ -146,12 +146,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import { createPaymentOrder } from '../services/payment'
 import { syncUserToDatabase } from '../services/database'
 
 const router = useRouter()
+const route = useRoute()
 
 // 状态变量
 const selectedMethod = ref('')
@@ -159,6 +160,20 @@ const isProcessing = ref(false)
 const showResultModal = ref(false)
 const paymentSuccess = ref(false)
 const errorMessage = ref('')
+
+// 检查URL参数（支付宝回调）
+onMounted(() => {
+  const status = route.query.status
+  const orderId = route.query.orderId
+
+  if (status && orderId) {
+    if (status === 'success') {
+      handlePaymentSuccess(orderId)
+    } else if (status === 'failed') {
+      handlePaymentFailure('支付失败')
+    }
+  }
+})
 
 // 处理支付
 const handlePayment = async () => {

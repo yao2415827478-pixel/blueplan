@@ -60,6 +60,16 @@
           "background": "transparent"
         }
       }
+    },
+    {
+      "path": "pages/Payment",
+      "style": {
+        "navigationBarTitleText": "支付",
+        "navigationStyle": "custom",
+        "app-plus": {
+          "bounce": "none"
+        }
+      }
     }
   ],
   "globalStyle": {
