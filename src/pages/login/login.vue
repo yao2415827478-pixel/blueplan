@@ -121,6 +121,9 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
+// ===== 后端API配置 =====
+const API_BASE_URL = 'http://120.27.139.123:3000'
+
 // 状态变量
 const phoneNumber = ref('')
 const code = ref('')
@@ -170,28 +173,57 @@ const scoreLevel = computed(() => {
   return '重度依赖 - 建议专业帮助'
 })
 
-// 发送验证码
-const sendCode = () => {
-  if (!phoneNumber.value || phoneNumber.value.length !== 11) {
+// 发送验证码 - 调用后端API
+const sendCode = async () => {
+  // 手机号校验 - 简单11位数字校验
+  const phoneRegex = /^1[3-9]\d{9}$/
+  if (!phoneNumber.value || !phoneRegex.test(phoneNumber.value)) {
     showToast('请输入正确的手机号')
     return
   }
 
-  // 开始倒计时
-  countdown.value = 60
-  const timer = setInterval(() => {
-    countdown.value--
-    if (countdown.value <= 0) {
-      clearInterval(timer)
+  showLoading('发送中...')
+
+  try {
+    // 调用后端短信API
+    const response = await fetch(`${API_BASE_URL}/send-sms-code`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        phone: phoneNumber.value
+      })
+    })
+
+    const result = await response.json()
+
+    hideLoading()
+
+    if (result.success || result.code === 0) {
+      // 开始倒计时
+      countdown.value = 60
+      const timer = setInterval(() => {
+        countdown.value--
+        if (countdown.value <= 0) {
+          clearInterval(timer)
+        }
+      }, 1000)
+
+      showToast('验证码已发送', 'success')
+
+      // 显示验证码输入弹窗
+      setTimeout(() => {
+        showCodeModal.value = true
+      }, 500)
+    } else {
+      showToast(result.message || '发送失败，请重试')
     }
-  }, 1000)
-
-  showToast('验证码已发送', 'success')
-
-  // 显示验证码输入弹窗（模拟）
-  setTimeout(() => {
-    showCodeModal.value = true
-  }, 500)
+  } catch (error) {
+    hideLoading()
+    console.error('发送验证码失败:', error)
+    showToast('网络错误，请检查后端服务是否启动')
+  }
 }
 
 // 确认验证码
@@ -203,9 +235,11 @@ const confirmCode = () => {
   }
 }
 
-// 处理登录
-const handleLogin = () => {
-  if (!phoneNumber.value || phoneNumber.value.length !== 11) {
+// 处理登录 - 调用后端API验证验证码
+const handleLogin = async () => {
+  // 手机号校验
+  const phoneRegex = /^1[3-9]\d{9}$/
+  if (!phoneNumber.value || !phoneRegex.test(phoneNumber.value)) {
     showToast('请输入正确的手机号')
     return
   }
@@ -215,28 +249,49 @@ const handleLogin = () => {
     return
   }
 
-  // 模拟登录
   showLoading('登录中...')
 
-  setTimeout(() => {
-    hideLoading()
+  try {
+    // 调用后端验证码验证API
+    const response = await fetch(`${API_BASE_URL}/verify-sms-code`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        phone: phoneNumber.value,
+        code: code.value
+      })
+    })
 
-    // 保存登录状态
-    localStorage.setItem('isLoggedIn', 'true')
-    localStorage.setItem('phoneNumber', phoneNumber.value)
-    localStorage.setItem('loginTime', Date.now().toString())
+    const result = await response.json()
 
-    // 如果没有开始日期，设置开始日期
-    if (!localStorage.getItem('startDate')) {
-      localStorage.setItem('startDate', Date.now().toString())
+    if (result.success || result.valid) {
+      // 验证成功，保存登录状态
+      localStorage.setItem('isLoggedIn', 'true')
+      localStorage.setItem('phoneNumber', phoneNumber.value)
+      localStorage.setItem('loginTime', Date.now().toString())
+
+      // 如果没有开始日期，设置开始日期
+      if (!localStorage.getItem('startDate')) {
+        localStorage.setItem('startDate', Date.now().toString())
+      }
+
+      hideLoading()
+      showToast('登录成功', 'success')
+
+      setTimeout(() => {
+        router.push('/home')
+      }, 500)
+    } else {
+      hideLoading()
+      showToast(result.message || '验证码错误，请重试')
     }
-
-    showToast('登录成功', 'success')
-
-    setTimeout(() => {
-      router.push('/home')
-    }, 500)
-  }, 1000)
+  } catch (error) {
+    hideLoading()
+    console.error('登录失败:', error)
+    showToast('网络错误，请检查后端服务是否启动')
+  }
 }
 </script>
 

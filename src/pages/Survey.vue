@@ -297,10 +297,10 @@ const suggestion = computed(() => {
   return '你的情况需要认真对待。建议从90天计划开始，并考虑寻求专业帮助。记住，你不是一个人，我们一起努力。每日坚持使用紧急求助功能，它会在关键时刻帮助你。'
 })
 
-// 前往登录
+// 前往产品介绍页
 const goToProductIntro = () => {
   localStorage.setItem('hasCompletedSurvey', 'true')
-  router.push('/login')
+  router.push('/product-intro')
 }
 </script>
 

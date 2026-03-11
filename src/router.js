@@ -3,6 +3,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 // 导入页面组件
 const Welcome = () => import('./pages/welcome/welcome.vue')
 const Survey = () => import('./pages/Survey.vue')
+const ProductIntro = () => import('./pages/ProductIntro.vue')
+const Payment = () => import('./pages/Payment.vue')
 const Login = () => import('./pages/login/login.vue')
 const Home = () => import('./pages/home/home.vue')
 const Plan = () => import('./pages/plan/plan.vue')
@@ -22,6 +24,16 @@ const routes = [
     path: '/survey',
     name: 'Survey',
     component: Survey
+  },
+  {
+    path: '/product-intro',
+    name: 'ProductIntro',
+    component: ProductIntro
+  },
+  {
+    path: '/payment',
+    name: 'Payment',
+    component: Payment
   },
   {
     path: '/login',
