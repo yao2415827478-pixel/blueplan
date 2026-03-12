@@ -87,12 +87,19 @@
         </button>
       </div>
     </div>
+
+    <!-- 开发者跳过按钮 -->
+    <DevSkipButton
+      text="跳过问卷"
+      :action="skipSurvey"
+    />
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
+import DevSkipButton from '../components/DevSkipButton.vue'
 
 const router = useRouter()
 
@@ -300,6 +307,22 @@ const suggestion = computed(() => {
 // 前往产品介绍页
 const goToProductIntro = () => {
   localStorage.setItem('hasCompletedSurvey', 'true')
+  router.push('/product-intro')
+}
+
+// 开发者跳过问卷
+const skipSurvey = () => {
+  // 写入默认问卷结果
+  const defaultResult = {
+    score: 65,
+    level: '高度依赖',
+    description: '你当前的依赖程度较高，建议立即开始90天戒色计划。',
+    answers: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+  }
+  localStorage.setItem('surveyResult', JSON.stringify(defaultResult))
+  localStorage.setItem('hasCompletedSurvey', 'true')
+
+  alert('[Dev] 问卷已跳过，已写入默认结果')
   router.push('/product-intro')
 }
 </script>

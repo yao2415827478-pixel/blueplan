@@ -73,6 +73,12 @@
         <span class="link-text">《隐私政策》</span>
       </div>
     </div>
+
+    <!-- 开发者跳过按钮 -->
+    <DevSkipButton
+      text="跳过登录"
+      :action="skipLogin"
+    />
   </div>
 </template>
 
@@ -80,6 +86,7 @@
 import { ref, computed, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { isSmsApiConfigured, getSmsApiUrl } from '../config/api'
+import DevSkipButton from '../components/DevSkipButton.vue'
 
 const router = useRouter()
 
@@ -228,7 +235,8 @@ const performLogin = () => {
   alert('登录成功！')
 
   setTimeout(() => {
-    router.replace('/home')
+    // 使用 push 跳转，确保导航成功
+    router.push('/home')
   }, 500)
 }
 
@@ -238,6 +246,23 @@ onUnmounted(() => {
     clearInterval(countdownTimer)
   }
 })
+
+// 开发者跳过登录
+const skipLogin = () => {
+  // 写入测试登录状态
+  localStorage.setItem('isLoggedIn', 'true')
+  localStorage.setItem('phone', '17762539752')
+  localStorage.setItem('loginTime', Date.now().toString())
+  localStorage.setItem('isInternalStaff', 'true')
+
+  // 如果没有开始日期，设置开始日期
+  if (!localStorage.getItem('startDate')) {
+    localStorage.setItem('startDate', Date.now().toString())
+  }
+
+  alert('[Dev] 登录已跳过，已写入测试登录状态')
+  router.push('/home')
+}
 </script>
 
 <style scoped>

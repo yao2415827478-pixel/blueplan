@@ -112,12 +112,19 @@
         </button>
       </view>
     </view>
+
+    <!-- 开发者跳过按钮 -->
+    <DevSkipButton
+      text="跳过登录"
+      :action="skipLogin"
+    />
   </view>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
+import DevSkipButton from '../../components/DevSkipButton.vue'
 
 const router = useRouter()
 
@@ -175,10 +182,41 @@ const scoreLevel = computed(() => {
 
 // 发送验证码 - 调用后端API
 const sendCode = async () => {
-  // 手机号校验 - 简单11位数字校验
+  // 去除手机号前后空格
+  const rawPhone = phoneNumber.value || ''
+  const trimmedPhone = rawPhone.trim().replace(/\s+/g, '')
+
+  console.log('=== sendCode Debug ===')
+  console.log('原始手机号:', rawPhone)
+  console.log('处理后手机号:', trimmedPhone)
+  console.log('处理后长度:', trimmedPhone.length)
+
+  // 手机号校验 - 严格11位数字校验
   const phoneRegex = /^1[3-9]\d{9}$/
-  if (!phoneNumber.value || !phoneRegex.test(phoneNumber.value)) {
+
+  // 详细验证
+  const isValidLength = trimmedPhone.length === 11
+  const isValidStart = trimmedPhone.startsWith('1')
+  const isValidSecond = /^[3-9]/.test(trimmedPhone.substring(1, 2))
+  const isAllDigits = /^\d+$/.test(trimmedPhone)
+
+  console.log('验证结果:', {
+    isValidLength,
+    isValidStart,
+    isValidSecond,
+    isAllDigits,
+    regexTest: phoneRegex.test(trimmedPhone)
+  })
+
+  if (!trimmedPhone) {
+    showToast('请输入手机号')
+    alert('调试: 请输入手机号')
+    return
+  }
+
+  if (!phoneRegex.test(trimmedPhone)) {
     showToast('请输入正确的手机号')
+    alert('调试: 手机号=' + trimmedPhone + ', 长度=' + trimmedPhone.length + ', 正确=否')
     return
   }
 
@@ -186,17 +224,23 @@ const sendCode = async () => {
 
   try {
     // 调用后端短信API
-    const response = await fetch(`${API_BASE_URL}/send-sms-code`, {
+    const requestUrl = `${API_BASE_URL}/send-sms-code`
+    console.log('Request URL:', requestUrl)
+    console.log('Request body:', JSON.stringify({ phone: trimmedPhone }))
+
+    const response = await fetch(requestUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        phone: phoneNumber.value
+        phone: trimmedPhone
       })
     })
 
+    console.log('Response status:', response.status)
     const result = await response.json()
+    console.log('Response result:', result)
 
     hideLoading()
 
@@ -218,10 +262,12 @@ const sendCode = async () => {
       }, 500)
     } else {
       showToast(result.message || '发送失败，请重试')
+      alert('后端返回: ' + (result.message || '未知错误'))
     }
   } catch (error) {
     hideLoading()
     console.error('发送验证码失败:', error)
+    alert('网络错误: ' + error.message)
     showToast('网络错误，请检查后端服务是否启动')
   }
 }
@@ -237,14 +283,22 @@ const confirmCode = () => {
 
 // 处理登录 - 调用后端API验证验证码
 const handleLogin = async () => {
+  // 去除手机号空格（和sendCode一致）
+  const trimmedPhone = (phoneNumber.value || '').trim().replace(/\s+/g, '')
+
+  console.log('=== handleLogin Debug ===')
+  console.log('手机号:', trimmedPhone)
+
   // 手机号校验
   const phoneRegex = /^1[3-9]\d{9}$/
-  if (!phoneNumber.value || !phoneRegex.test(phoneNumber.value)) {
+  if (!trimmedPhone || !phoneRegex.test(trimmedPhone)) {
+    alert('调试: 手机号=' + trimmedPhone + ', 长度=' + trimmedPhone.length + ', 正确=否')
     showToast('请输入正确的手机号')
     return
   }
 
   if (!code.value || code.value.length < 4) {
+    alert('调试: 请先获取验证码')
     showToast('请输入验证码')
     return
   }
@@ -292,6 +346,23 @@ const handleLogin = async () => {
     console.error('登录失败:', error)
     showToast('网络错误，请检查后端服务是否启动')
   }
+}
+
+// 开发者跳过登录
+const skipLogin = () => {
+  // 写入测试登录状态
+  localStorage.setItem('isLoggedIn', 'true')
+  localStorage.setItem('phoneNumber', '17762539752')
+  localStorage.setItem('loginTime', Date.now().toString())
+  localStorage.setItem('isInternalStaff', 'true')
+
+  // 如果没有开始日期，设置开始日期
+  if (!localStorage.getItem('startDate')) {
+    localStorage.setItem('startDate', Date.now().toString())
+  }
+
+  alert('[Dev] 登录已跳过，已写入测试登录状态')
+  router.push('/home')
 }
 </script>
 

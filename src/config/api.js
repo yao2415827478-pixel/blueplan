@@ -11,8 +11,9 @@ const API_CONFIG = {
 
   // ===== 短信验证码 API (阿里云) =====
   // 您的阿里云短信服务API
+  // 演示模式：设为空字符串，不调用真实API
   smsApi: {
-    baseUrl: 'http://localhost:3000', // 后端API地址
+    baseUrl: '', // 后端API地址，设为空使用演示模式
     sendCode: '/send-sms-code',      // 发送验证码接口
     verifyCode: '/verify-sms-code'   // 验证验证码接口
   },
