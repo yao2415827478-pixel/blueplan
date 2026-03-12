@@ -79,7 +79,7 @@
 <script setup>
 import { ref, computed, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { isSmsApiConfigured, getSmsApiUrl } from '../config/api'
+import API_CONFIG, { getApiUrl } from '../config/api'
 
 const router = useRouter()
 
@@ -130,34 +130,30 @@ const sendCode = async () => {
     }
   }, 1000)
 
-  // 检查是否配置了真实API
-  if (isSmsApiConfigured()) {
-    try {
-      // 调用真实API发送验证码
-      const apiUrl = getSmsApiUrl('sendCode')
-      console.log('发送验证码到:', apiUrl, phone.value)
+  // 调用后端API发送验证码
+  try {
+    const apiUrl = getApiUrl(API_CONFIG.endpoints.sendSmsCode)
+    console.log('发送验证码到:', apiUrl, phone.value)
 
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone: phone.value.trim() })
-      })
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone: phone.value.trim() })
+    })
 
-      const data = await response.json()
+    const data = await response.json()
 
-      if (data.success) {
-        alert('验证码已发送到您的手机')
-      } else {
-        alert(data.message || '发送失败，请稍后重试')
-      }
-    } catch (error) {
-      console.error('发送验证码失败:', error)
-      alert('发送失败，请稍后重试')
+    if (data.success) {
+      alert('验证码已发送到您的手机')
+    } else {
+      alert(data.message || '发送失败，请稍后重试')
     }
-  } else {
-    // 演示模式：使用固定验证码
-    alert('验证码已发送到您的手机 (演示: 123456)')
-    code.value = '123456'
+  } catch (error) {
+    console.error('发送验证码失败:', error)
+    alert('发送失败，请检查网络连接或联系客服')
+    // 发生错误时重置倒计时
+    clearInterval(countdownTimer)
+    countdown.value = 0
   }
 }
 
@@ -178,38 +174,29 @@ const handleLogin = async () => {
     return
   }
 
-  // 检查是否配置了真实API进行验证码验证
-  if (isSmsApiConfigured()) {
-    try {
-      const apiUrl = getSmsApiUrl('verifyCode')
-      console.log('验证验证码:', apiUrl)
+  // 调用后端API验证验证码
+  try {
+    const apiUrl = getApiUrl(API_CONFIG.endpoints.verifySmsCode)
+    console.log('验证验证码:', apiUrl)
 
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone: phone.value.trim(), code: code.value })
-      })
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone: phone.value.trim(), code: code.value })
+    })
 
-      const data = await response.json()
+    const data = await response.json()
 
-      if (!data.success) {
-        alert(data.message || '验证码错误')
-        return
-      }
-
-      // 验证码验证成功
-      performLogin()
-    } catch (error) {
-      console.error('登录失败:', error)
-      alert('登录失败，请稍后重试')
+    if (!data.success) {
+      alert(data.message || '验证码错误')
+      return
     }
-  } else {
-    // 演示模式：接受任意4位及以上数字
-    if (code.value.length >= 4) {
-      performLogin()
-    } else {
-      alert('请输入验证码')
-    }
+
+    // 验证码验证成功，执行登录
+    performLogin()
+  } catch (error) {
+    console.error('登录失败:', error)
+    alert('登录失败，请检查网络连接或联系客服')
   }
 }
 
