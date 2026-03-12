@@ -142,4 +142,4 @@ tmp/
 temp/
 
 # System files
-Thumbs.db
+Thumbs.dbbackend/.env
