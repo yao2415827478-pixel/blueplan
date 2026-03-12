@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付宝支付测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #1677ff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin: 10px 0;
+        }
+        button:hover {
+            background: #0958d9;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .success {
+            background: #f6ffed;
+            border: 1px solid #b7eb8f;
+            color: #52c41a;
+        }
+        .error {
+            background: #fff2f0;
+            border: 1px solid #ffccc7;
+            color: #ff4d4f;
+        }
+        .info {
+            background: #e6f7ff;
+            border: 1px solid #91d5ff;
+            color: #1890ff;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>支付宝支付功能测试</h1>
+        
+        <div class="test-section">
+            <h3>1. 测试后端连接</h3>
+            <p>检查后端API是否可访问：<code>http://localhost:3000</code></p>
+            <button onclick="testConnection()">测试连接</button>
+            <div id="connectionResult" class="result"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>2. 测试创建订单</h3>
+            <p>模拟创建支付宝订单（金额：9.90元）</p>
+            <button onclick="createOrder()">创建订单</button>
+            <div id="orderResult" class="result"></div>
+        </div>
+        
+        <div class="test-section">
+            <h3>3. 测试APK支付流程</h3>
+            <p>请按照以下步骤测试：</p>
+            <ol>
+                <li>确保手机和电脑在同一WiFi网络</li>
+                <li>在手机上安装APK：<code>H:\布鲁计划apk\app-debug.apk</code></li>
+                <li>打开应用，进入支付页面</li>
+                <li>选择支付宝支付，点击支付按钮</li>
+                <li>观察是否出现"支付失败"提示</li>
+            </ol>
+            <div id="apkResult" class="result info">
+                <strong>当前状态：</strong>等待测试<br>
+                <strong>后端地址：</strong>http://localhost:3000<br>
+                <strong>测试服务器：</strong>运行中
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>4. 错误信息收集</h3>
+            <p>如果支付失败，请提供以下信息：</p>
+            <textarea id="errorInfo" rows="4" style="width:100%; padding:10px;" placeholder="1. 错误提示文字
+2. 是否有网络错误
+3. 是否跳转到支付宝App
+4. 其他相关信息"></textarea>
+            <button onclick="submitError()">提交错误信息</button>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:3000';
+        
+        function showResult(elementId, message, type) {
+            const element = document.getElementById(elementId);
+            element.innerHTML = message;
+            element.className = 'result ' + type;
+            element.style.display = 'block';
+        }
+        
+        async function testConnection() {
+            try {
+                const response = await fetch(`${API_BASE}/api/health`);
+                const data = await response.json();
+                showResult('connectionResult', 
+                    `✅ 连接成功！<br>状态：${data.message}<br>时间：${data.timestamp}`, 
+                    'success');
+            } catch (error) {
+                showResult('connectionResult', 
+                    `❌ 连接失败：${error.message}<br>请确保后端服务正在运行`, 
+                    'error');
+            }
+        }
+        
+        async function createOrder() {
+            try {
+                const orderData = {
+                    amount: '9.90',
+                    subject: '布鲁计划VIP会员',
+                    description: '90天戒色计划 + 每日心理引导 + 永久使用',
+                    userId: 'test_user_' + Date.now()
+                };
+                
+                const response = await fetch(`${API_BASE}/alipay/create-order`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderData)
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    showResult('orderResult', 
+                        `✅ 订单创建成功！<br>
+                        <strong>订单ID：</strong>${data.orderId}<br>
+                        <strong>支付参数：</strong><br>
+                        <code style="font-size:12px; word-break:break-all;">${data.payParams.orderStr}</code>`, 
+                        'success');
+                } else {
+                    showResult('orderResult', 
+                        `❌ 订单创建失败：${data.message}`, 
+                        'error');
+                }
+            } catch (error) {
+                showResult('orderResult', 
+                    `❌ 请求失败：${error.message}`, 
+                    'error');
+            }
+        }
+        
+        function submitError() {
+            const errorInfo = document.getElementById('errorInfo').value;
+            if (!errorInfo.trim()) {
+                alert('请填写错误信息');
+                return;
+            }
+            
+            showResult('apkResult', 
+                `📋 错误信息已记录：<br><pre>${errorInfo}</pre><br>正在分析问题...`, 
+                'info');
+            
+            // 这里可以添加发送错误信息到后端的逻辑
+            console.log('用户提交的错误信息：', errorInfo);
+        }
+        
+        // 页面加载时自动测试连接
+        window.onload = testConnection;
+    </script>
+</body>
+</html>
