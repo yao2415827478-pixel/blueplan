@@ -73,12 +73,6 @@
         <span class="link-text">《隐私政策》</span>
       </div>
     </div>
-
-    <!-- 开发者跳过按钮 -->
-    <DevSkipButton
-      text="跳过登录"
-      :action="skipLogin"
-    />
   </div>
 </template>
 
@@ -86,7 +80,6 @@
 import { ref, computed, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { isSmsApiConfigured, getSmsApiUrl } from '../config/api'
-import DevSkipButton from '../components/DevSkipButton.vue'
 
 const router = useRouter()
 

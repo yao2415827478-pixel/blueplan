@@ -87,19 +87,12 @@
         </button>
       </div>
     </div>
-
-    <!-- 开发者跳过按钮 -->
-    <DevSkipButton
-      text="跳过问卷"
-      :action="skipSurvey"
-    />
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import DevSkipButton from '../components/DevSkipButton.vue'
 
 const router = useRouter()
 

@@ -105,19 +105,12 @@
         立即加入计划
       </button>
     </div>
-
-    <!-- 开发者跳过按钮 -->
-    <DevSkipButton
-      text="跳过展示"
-      :action="skipProductIntro"
-    />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import DevSkipButton from '../components/DevSkipButton.vue'
 
 const router = useRouter()
 const surveyScore = ref(0)

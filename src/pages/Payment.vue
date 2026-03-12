@@ -142,12 +142,6 @@
         </div>
       </div>
     </div>
-
-    <!-- 开发者跳过按钮 -->
-    <DevSkipButton
-      text="跳过支付"
-      :action="skipPayment"
-    />
   </div>
 </template>
 
@@ -261,18 +255,6 @@ const handlePaymentFailure = (error) => {
 // 跳转登录
 const goToLogin = () => {
   router.replace('/login')
-}
-
-// 开发者跳过支付
-const skipPayment = () => {
-  // 模拟支付成功状态
-  localStorage.setItem('hasPaid', 'true')
-  localStorage.setItem('paymentMethod', 'alipay')
-  localStorage.setItem('paymentTime', Date.now().toString())
-  localStorage.setItem('orderId', 'dev_skip_order_' + Date.now())
-
-  alert('[Dev] 支付已跳过，已写入已支付状态')
-  router.push('/login')
 }
 </script>
 
