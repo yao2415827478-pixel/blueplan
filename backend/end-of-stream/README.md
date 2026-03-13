@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3044022075ca07c8bdcce986dbcdbb06431e1f3264d44f83bfca7fe6d1a291520bdf2b82022076c25fbea1fc4c34bcf638dd37e9def5f5b78de150495f9bfa578be7cdbe55db
+    ReservedCode2: 3045022100b44d7db2c7fd1631758e6a81ae2711b550202c540d75639279dd15edd332dfc702200733e507ca6f3b17b5bfdc7c73878bcd8130ae04ae48a786967202954b0b8d34
+---
+
 # end-of-stream
 
 A node module that calls a callback when a readable/writable/duplex stream has completed or failed.

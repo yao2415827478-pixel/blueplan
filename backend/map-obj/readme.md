@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100e487461d3488043216c2fd2b4fe04952d53fbd124208cb276df128f990571bc60220558f675a554cda061ebbc147ef43026ec66c8dee12cd2dab0cbbafa3e11ded4b
+    ReservedCode2: 304502205d3da33bcb558e14369829da4a90c880e748ec6ae692a17c621a2e7111a86fdb022100992d07d98397bb93449a4c9330b64f205aaa84ca09ad9b879ba81fc18256bc60
+---
+
 # map-obj [![Build Status](https://travis-ci.org/sindresorhus/map-obj.svg?branch=master)](https://travis-ci.org/sindresorhus/map-obj)
 
 > Map object keys and values into a new object

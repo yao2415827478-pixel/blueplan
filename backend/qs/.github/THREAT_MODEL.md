@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100c42ab5167dc57cfb0c9a7c144d9d6e8c74c458fc49ba57ce638f34087350c459022042e304edfd04ef3509dfd23a0ce83e709719ae7dc6c42aecfd90e348132386dd
+    ReservedCode2: 304602210082ba40ac01f6bc06b5fc9656b1bd704efd9e87c6b31a4474ce21db9e7679164a022100ab1651ee2a3d1f07c57d2daf472d8a4dd715b95f46d61d6f001fc56573e73f76
+---
+
 ## Threat Model for qs (querystring parsing library)
 
 ### 1. Library Overview

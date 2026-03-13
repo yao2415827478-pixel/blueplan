@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100a1c260c08a1e1db538edad2c0de01e2b8aa30518028634405cb7262efea11c9302204207c8a4db144ceb7346c25632517975774b921689d21f96f02253be04aa7b94
+    ReservedCode2: 3045022100a774c4de9d0f876f065ef4ee3985245843071cdbd26759fe375dca178447551b02202e8b12bcd9b8192038cbc255f50ce05bc5392843161605caf45fce933e1abb82
+---
+
 # dunder-proto <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
 [![github actions][actions-image]][actions-url]

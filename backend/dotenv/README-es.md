@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304502200e4bdc1f8acfe447ab63cfe5abf08f65aac3c73ac0c734532e7d164317be31720221009450ac343c51dbaf6a74b81a6cf53b7d3f73594515a99a53cc4e922ace53391b
+    ReservedCode2: 3046022100dc2ebade91c8b19a98a68ff7c89a533ea8e1e192c2fd90969c4b3304fcf2f0e0022100cf2983761c762dc852d8e2abeb95d4423978adc4369bcce541e7266a318b6098
+---
+
 # dotenv [![NPM version](https://img.shields.io/npm/v/dotenv.svg?style=flat-square)](https://www.npmjs.com/package/dotenv) [![downloads](https://img.shields.io/npm/dw/dotenv)](https://www.npmjs.com/package/dotenv)
 
 <img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg" alt="dotenv" align="right" width="200" />

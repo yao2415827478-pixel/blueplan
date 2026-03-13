@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304402207a335c27ea07cab06919ab28af2aa326acae50adb0bbbbe505ec49f74d86c002022007260204845a5227f04f40f078a7846144b25ff53ad351a4a3fd73a510b2aa36
+    ReservedCode2: 3045022100b8311811c9c024a5d4fe283de08b15814bb2c02236d58545309080be66faf6dd022055e9c8a96c4353d04d91e02f6304be2786ace20779dff761cc57122835eea3cb
+---
+
 ![bignumber.js](https://raw.githubusercontent.com/MikeMcl/bignumber.js/gh-pages/bignumberjs.png)
 
 A JavaScript library for arbitrary-precision decimal and non-decimal arithmetic.

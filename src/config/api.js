@@ -1,30 +1,27 @@
 // API 配置文件
-// 等您办好微信/支付宝/邮箱API和数据库后，在此配置即可
+// 连接至用户真实后端服务器
 
 const API_CONFIG = {
   // ===== 数据库 API =====
-  // 配置您的数据库API地址
-  // 示例: 'http://120.27.139.123:3000' 或 'http://blue-plan1.cn:3000'
+  // 服务器地址: 120.27.139.123
   database: {
-    baseUrl: 'http://localhost:3000'
+    baseUrl: 'http://120.27.139.123:3000'
   },
 
-  // ===== 短信验证码 API (阿里云) =====
-  // 您的阿里云短信服务API
-  // 演示模式：设为空字符串，不调用真实API
+  // ===== 短信验证码 API =====
+  // 服务器短信API地址
   smsApi: {
-    baseUrl: '', // 后端API地址，设为空使用演示模式
+    baseUrl: 'http://120.27.139.123:3000', // 后端API地址
     sendCode: '/send-sms-code',      // 发送验证码接口
     verifyCode: '/verify-sms-code'   // 验证验证码接口
   },
 
   // ===== 阿里云短信配置 =====
-  // 阿里云短信服务配置（在服务器端使用）
+  // 阿里云短信服务配置（在服务器端使用，前端不存储敏感信息）
   aliyunSms: {
-    accessKeyId: 'fhyHmw7I2ILL8jo2Aw+Y0XqAZbOzp1HEVCbu69p4XdY', // 您的AccessKey
-    // 以下配置需要在阿里云控制台获取并填写
+    // 注意：AccessKey 仅存储在服务器端环境变量中，前端不存储
     signName: '布鲁计划',           // 短信签名
-    templateCode: 'SMS_xxxxxxxx',  // 短信模板CODE
+    templateCode: 'SMS_501700483', // 短信模板CODE
     region: 'cn-hangzhou'
   },
 
@@ -38,9 +35,9 @@ const API_CONFIG = {
   },
 
   // ===== 支付宝支付 API =====
-  // 配置您的支付宝API地址
+  // 服务器支付宝API地址
   alipay: {
-    baseUrl: 'http://localhost:3000', // 您的后端API地址
+    baseUrl: 'http://120.27.139.123:3000', // 您的后端API地址
     createOrder: '/alipay/create-order', // 创建订单
     queryOrder: '/alipay/query-order', // 查询订单状态
     notifyUrl: '/alipay-notify' // 支付回调通知

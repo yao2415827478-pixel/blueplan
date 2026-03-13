@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3044021f6c930e465f3fcdda8e21967ed1f157332ac077b6ab42bdae0940e3dc33efb0022100b188ef717b2cb49ca1e674e6f47af62e9b62b3e1e3449e8ad9e566ec33fea20e
+    ReservedCode2: 3045022100c032fa20ac00dcaf27695cc49f5eaa1d1940c4243c3513f4443eb2a24c2e90a8022038c10e8c8be8a5688e080875500ecc2e0889a2ff4d18c67949a418945aab58f2
+---
+
 # crypto-js
 
 JavaScript library of crypto standards.

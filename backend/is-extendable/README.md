@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304502205e6931c1ee134704e0a7b75428fd7c471706e38bf8474f83a9c39f7c29d6b93c022100aa8fdb998601e8295331c5531c4bf525954c4b45f7e911a2652d723c8b49e9ac
+    ReservedCode2: 3045022100877eff054eedfbb2071f9f80aa8f2cd898ddcf54949780403a306e826898999a022002896257c7d5d294fc6d1e5ef2d04d427106fd1626a8bdc6d8f0e0d719e623e8
+---
+
 # is-extendable [![NPM version](https://badge.fury.io/js/is-extendable.svg)](http://badge.fury.io/js/is-extendable)
 
 > Returns true if a value is any of the object types: array, regexp, plain object, function or date. This is useful for determining if a value can be extended, e.g. "can the value have keys?"

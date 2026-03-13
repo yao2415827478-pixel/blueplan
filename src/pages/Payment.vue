@@ -150,7 +150,6 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { createPaymentOrder } from '../services/payment'
 import { syncUserToDatabase } from '../services/database'
-import DevSkipButton from '../components/DevSkipButton.vue'
 
 const router = useRouter()
 

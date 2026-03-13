@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100a3863a60c56c38ac98f09f2998d899cd6543065a38450cd58264a6e327e8fa3902204396317bdfbb8f86a238285d5066d8a6cd259f36c4ca197ea220953855ec1c62
+    ReservedCode2: 3046022100b8e64b7e5177466845588800d57df37dd6f8d73bd36e277914d3f5d7bf9f663d022100e5b1d3e49b15954b6800b174aa2f36ba59f0f424ad7e7643b2e84c28698f0f50
+---
+
 # pump
 
 pump is a small node module that pipes streams together and destroys all of them if one of them closes.

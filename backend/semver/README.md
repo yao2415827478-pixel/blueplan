@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304402203f6bc5701d469d1bcae772cc7f2e333cb24d5176968b71371ae022f106d4a8af0220468dc2b3ffbc1a6cf138dde05505ebcba31828e14b0df7443cd4d747d44d2d80
+    ReservedCode2: 3046022100e6e4bc92b6a03b3690213fd52efbcdd40c1f40b7398b190dbf0272ee47a2e14b02210089c2ba24092f00a1ac69bd0fdf6489aaf2b04017abf5687dbdf6a93953c157cf
+---
+
 semver(1) -- The semantic versioner for npm
 ===========================================
 

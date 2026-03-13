@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3044022100dfd0689ecdfff16e200901f23889f16ca3c63d7fdec73ede39e98567b14e9127021f18fa982b8f9d5db3611c62acdf503b673960b83085f74a4ee59ec3d7b60dea
+    ReservedCode2: 3045022100d390b5098a18d0e93e88651acfcecba11bf71f3a8cf92a199e3c78ba2402ab6302203431967e5227049f9af028f5fb22fb3004bc011161a3938dd8643e3b6b7e1f15
+---
+
 # [@fidm/x509](https://github.com/fidm/x509)
 Pure JavaScript X509 certificate tools for Node.js.
 

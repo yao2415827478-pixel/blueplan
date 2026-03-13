@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3046022100ad85e87ffc8ea880454e823d54ab228135d996877689bcfcc1d400ae618ef82a022100a4e35e6b4609679b8f3f74626537d2eecd8da87c59c73289e9a1ef17634caa4f
+    ReservedCode2: 304502210091bfd654deb36b4b82d62cf3738dcd883a04d7d061ef5a3da7a8aaab63d78680022045101d45e5eeb7b2b69c60ef8f0ff5239adcd13345d2c3ff4006a6e79ae6c62e
+---
+
 # math-intrinsics <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
 [![github actions][actions-image]][actions-url]

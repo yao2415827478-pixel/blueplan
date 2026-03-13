@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30450220124bf42fb1fae0ed7ea640271505769aeaa8819a63ef7d55df4f77d7dd230563022100bee5f887764bd9c7f196e8a760f3c98996168af70a14418dcf6b27caad43efa7
+    ReservedCode2: 304402206354d47e42617a7da256de14a92fc7fcb86a9d36fa220d4b6a7b36ecc00598ab022025513f6724d6a293ca0219afc0232ce64b051572852b69e8146b61f95c29a187
+---
+
 # Nodemailer
 
 [![Nodemailer](https://raw.githubusercontent.com/nodemailer/nodemailer/master/assets/nm_logo_200x136.png)](https://nodemailer.com/about/)

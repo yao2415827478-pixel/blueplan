@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304402200a53a819b045043e19a0f6db2ac0e93253e07c55d9ba8f261b6e6cd0c8acfc4102204229f3c052711ae8aa4389d8d93328c4bc4c8725e3b8030c2f01fad8bcc6553b
+    ReservedCode2: 3045022100d9518ce7cf3bc74c345930132fff0f4a8f1161759b150f19295f15f22ae0980f02207fa4d0d69ec687461a8328d98e2c7d59182e444b29d437a15391f0e9a355e80e
+---
+
 # ipaddr.js — an IPv6 and IPv4 address manipulation library [![Build Status](https://travis-ci.org/whitequark/ipaddr.js.svg)](https://travis-ci.org/whitequark/ipaddr.js)
 
 ipaddr.js is a small (1.9K minified and gzipped) library for manipulating

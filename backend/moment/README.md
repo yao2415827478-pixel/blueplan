@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3044022062e15af20f56c0b16edd9cae5c36dee749ed98370ebc6a1bc0b27efef577e41002203fbe5ebb6af74381c3e94fb301e3266336fd0af7b6f24346930f27c86c49542b
+    ReservedCode2: 304502210095f78b41d0398453db68f51cf847f2458bc73e00dac1f50439fe93c292aa092d02202d4fd5105b351ab00a022a984d21f7c74ccde8dd636aeab1ce9e737dd5a0acce
+---
+
 # [Moment.js](http://momentjs.com/)
 
 [![NPM version][npm-version-image]][npm-url]

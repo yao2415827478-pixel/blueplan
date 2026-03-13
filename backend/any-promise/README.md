@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30450221009dee8adc5a93e4e224836175c6c24d01851838ef2353801e5143409534633707022065f478f3ac0cbbbcaaf7667c880b67b9fb896a696f5faf64322991189302fe17
+    ReservedCode2: 3045022048c6494d63d2644e94f432769f72406f6529623039ede4f3fbd83c4c40992ac3022100cbc9de1435c04b00c9b246eed34677764ea20fcec340f22d853481af3893d705
+---
+
 ## Any Promise
 
 [![Build Status](https://secure.travis-ci.org/kevinbeaty/any-promise.svg)](http://travis-ci.org/kevinbeaty/any-promise)

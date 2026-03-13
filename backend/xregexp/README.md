@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304402207feb99eae1610b5f4e3739d2ba4fb39310a0c04e6aeda77d79d0b999bfd5256d022002e9cfab962abb6f4099c4a1f085b01080aa81adee9365e329e164095954b461
+    ReservedCode2: 304602210096330ed2cbda55a09629e08ae087e90075e8376e9d55e6bb1e3192229e17fe11022100f066b3ed5277d23949070254cdf001becf3798e48fc8096c287418dc4e3ff4fe
+---
+
 # XRegExp 4.0.0
 
 [![Build Status](https://travis-ci.org/slevithan/xregexp.svg?branch=master)](https://travis-ci.org/slevithan/xregexp)

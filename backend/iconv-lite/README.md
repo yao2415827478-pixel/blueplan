@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30450221009d2d93716c87e514091a11fb6e2c0e1d74f8354888ab01767ee999b98232f33b022055e644198d7c1006cbef21bc670b6d5f314becffa91e69a89e3992d6fcaa45b4
+    ReservedCode2: 3045022100a35d43d23d80ac527375b4b489568de049bf08c4c603c187307e22245aee89c1022055bc8e1ef2c3fb4b96d301a0cb59615be9449b985fda02636a891f78036fda47
+---
+
 ## Pure JS character encoding conversion [![Build Status](https://travis-ci.org/ashtuchkin/iconv-lite.svg?branch=master)](https://travis-ci.org/ashtuchkin/iconv-lite)
 
  * Doesn't need native code compilation. Works on Windows and in sandboxed environments like [Cloud9](http://c9.io).

@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3046022100948db48f946b00b1d415f3e843d7032f9ce0f0448c7949961972cee8c3f6e929022100a0b02134bbd9dc79657212c89857221e4321d48342c6ee42ce6903056e7a2889
+    ReservedCode2: 304502203e1532933c25705d942f4eeccc2a73867e6fff38651cfc19efc617687c5d3e1b022100f8d6e47db917e7b482e85eb096da4543cc69a7a57bdf553834bc1edeb8cb8f36
+---
+
 # Changelog
 
 All notable changes to this project will be documented in this file.

@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304502206873b73ddc788e1d37dd2dc52a6de895e64f17746c875d49adb319900b5efd6002210092a8867339b6d51d3887dd3bfcfea84e8a147a1e1f71e1e206bfe50656053b6f
+    ReservedCode2: 304402206966f931930c72a5d95a359ee96ae778a0dc9b0591fabcfb6fe5faca47eafc3102201dedfbcea26c29ca83acd99ea257b3fbb58112d324d309901f042c5c833c5479
+---
+
 [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
 
 **Fast, unopinionated, minimalist web framework for [Node.js](http://nodejs.org).**

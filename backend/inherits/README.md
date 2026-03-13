@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30440221009c82eb76a97a0b417bd5124108fa9faafcf2790b26957865435b5ee1cd5c9049021f69dbd1cc0b47424e62f60a6779bc6e2fb194323ba44285cfc9391819b74591
+    ReservedCode2: 3045022100d12cdcc31cfd44818c97fa4b93b385b4ead7b280d6f6a46d0a086f299b4ae819022012d7b988d09d2644c92e0eea20ad1de542b49ab8bcbd1009a6f73fb7623a4cc3
+---
+
 Browser-friendly inheritance fully compatible with standard node.js
 [inherits](http://nodejs.org/api/util.html#util_util_inherits_constructor_superconstructor).
 

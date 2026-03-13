@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304402205b951d71a4943bae54cbc1d56f6b339caebec80c09d33f73aa0723ce34962e06022044af714213ec3fc20f48a203a6cba50a06692aa018c337cfc362079eed8aaba9
+    ReservedCode2: 3045022100856d44b745ced620328e0c2090e66d0e1e7fd307fddee2097659e4fa648430cd02206e8296e05e602b6b8752d4c6ad2dfed24068ede898dc8afc8271b8e002feba18
+---
+
 ## **6.14.2**
 - [Fix] `parse`: mark overflow objects for indexed notation exceeding `arrayLimit` (#546)
 - [Fix] `arrayLimit` means max count, not max index, in `combine`/`merge`/`parseArrayValue`

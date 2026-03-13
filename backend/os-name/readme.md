@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30460221009e24ee9663e1badd98d3f9a8d0bae1aedf573bc75d0b914a52f0752b17b9f3f7022100dd9ff558b0c4eae7d75ad6f937fdb35a8b11c45cadcc305af85243e66633b00f
+    ReservedCode2: 3045022071342f534ee719cf5ef3fd2b9576d957b375ed2a2823df865022a1e3237d452c0221009cbe0c7ef9be7d79cc48257e407ff87e300e4330321ba427c83786eee8650c00
+---
+
 # os-name [![Build Status](https://travis-ci.org/sindresorhus/os-name.svg?branch=master)](https://travis-ci.org/sindresorhus/os-name)
 
 > Get the name of the current operating system. Example: `OS X Mavericks`

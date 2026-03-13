@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30460221009b35ffc0ae132c3913e46b341f03b726d74f884bb8c896f29aac02a34fc7c832022100c7f3d382e54c31a7b9547c20bca50a70fed4621127f1ce35ee32643a90b8efc7
+    ReservedCode2: 3045022053e1ed15603b4ede9499cf57226dd4af9c3d50f4a6552a22ed999fdc6eff1a60022100ebc2e7b291b5e9dcee3a2ab87a6597dcb9c37152d18478af90c1962d19f862c9
+---
+
 # 支付宝 App 支付接入说明
 
 ## 最新配置方式 ✅

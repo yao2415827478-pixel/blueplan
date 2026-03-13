@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100ec6486eb158ed429f5ad5762c3394f56c1bd3bc922b9d17da8a3f8ddbc5cda0502207c5bd52dea90761276c1bcc7322cfeb25fc7f17ff86172d45edf16713294a170
+    ReservedCode2: 304502204ba8cc142968bca6e526ac70ea005d5a44bc165a97ca930ec8cef217544d6576022100e167393843ac393e7594eb1267ef5a6234d63735927c200e86bfda2beb31031c
+---
+
 # osx-release [![Build Status](https://travis-ci.org/sindresorhus/osx-release.svg?branch=master)](https://travis-ci.org/sindresorhus/osx-release)
 
 > Get the name and version of a OS X release from the Darwin version.  

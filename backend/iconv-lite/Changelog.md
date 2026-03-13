@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3046022100a82bb1ace68e986a85bdfb17e966321ab9c2c92a1f8bfe0f41e8c7962529e8c8022100a76a0cc55817f0f1b89c1bfb924c6bd871c706b591949c27d0c56cbf6d9d3cba
+    ReservedCode2: 30440220618ec29927d9fd49e25c187775858368da4c4086d493af3ec117c9ce8154bfa402205096e62ca3dafc60e040e3ce954fdfb4245e840f44152036fc8b6d269c30b708
+---
+
 # 0.4.24 / 2018-08-22
 
   * Added MIK encoding (#196, by @Ivan-Kalatchev)

@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304402202bb7acc2ebc38e5489fd81c960b01f78235cdd028438a76ca4193c4e8d5f05f602202afadf9c37ca978097e1943cbca2de62b51aa22d7cfdbaa30e3ef8cc19adf378
+    ReservedCode2: 3044022016dc7a6a76249e58bc682454ef63ad108b5740c298565b3902719bce34399df602200bff36ad47dfd42b7f93d3da846427eec5ddfddace58026e73c9ac196ef91e35
+---
+
 # ms
 
 [![Build Status](https://travis-ci.org/zeit/ms.svg?branch=master)](https://travis-ci.org/zeit/ms)

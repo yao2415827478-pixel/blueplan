@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022058e035e6fc97cfe1e52be0042f38794763383c790e32d68890f1390c5ae2de5a022100f37446d9e90f279279bc7ace3434a33232fec17aef33ce722038e15430785fbb
+    ReservedCode2: 30450221008f907e7db246ca569ab9340404e2fc5af9401d7941c8c115fd0b77ddd0a840860220344702ec6159ddaa6b62c9c2f2d79ccaf1990640bd66715821d746d5da864ce9
+---
+
 # quick-lru [![Build Status](https://travis-ci.org/sindresorhus/quick-lru.svg?branch=master)](https://travis-ci.org/sindresorhus/quick-lru) [![Coverage Status](https://coveralls.io/repos/github/sindresorhus/quick-lru/badge.svg?branch=master)](https://coveralls.io/github/sindresorhus/quick-lru?branch=master)
 
 > Simple ["Least Recently Used" (LRU) cache](https://en.m.wikipedia.org/wiki/Cache_replacement_policies#Least_Recently_Used_.28LRU.29)

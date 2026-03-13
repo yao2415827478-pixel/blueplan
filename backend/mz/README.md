@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100e115c314dfcc9dcd99d1de5abfaab19732e2de70ba656b97da9e82ada1863751022043a17956b307ba23cc37c875cc249a7308c9ed9d0682cf9fa8e3fececf66fc93
+    ReservedCode2: 3045022065acd68e8f213478d7ec41bbdea8e14f9c358ff7e5294ab3cfda1170a5e602cc0221009c2ffd05d9b08273eec7bc9e65ac29d87eb21f62b85b6263d50f5ca8186031ea
+---
+
 
 # MZ - Modernize node.js
 

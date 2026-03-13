@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022050c8174798f79b645cba541fa060f7d8cf045d71218394098824d27aa775f302022100c994b0817cf9208a4b2c8bc26afce2a2e39b89082d1b55e26e329d6c08d907f2
+    ReservedCode2: 3044022042ffdd7b6c267b3f570a16c266d22e7d6460e90938d3dfdc4ead28b5e54762bc02201359df5bff2f54512bd8fd3e2d482c8729c1f095f3bfbb55f2a905548bb3fb63
+---
+
 # is-json
 
 <a href="https://nodei.co/npm/is-json/"><img src="https://nodei.co/npm/is-json.png?downloads=true"></a>

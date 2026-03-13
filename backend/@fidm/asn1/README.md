@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100cfac86048cd0a353ea1fd929664760bb8978a9cbd39fcf103ebad11b22f838160220633d1341b358c957369c45b5ef91a44a092d6d5cf01ebe31bcb8eb3fe3898454
+    ReservedCode2: 304402206fe133e6cb4bfc109ea4e512829141707e294f5ae6ac55b87344d62082b1e09b02200bae0a9ca05bab1c71cfff663cf6c36cffef6b7455671de5b0fd0ef18fcb68d5
+---
+
 # [@fidm/asn1](https://github.com/fidm/asn1)
 ASN.1/DER, PEM for Node.js.
 

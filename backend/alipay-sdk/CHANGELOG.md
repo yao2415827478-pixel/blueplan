@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100b96a16b042edc741fbcece54ddefe8b02d7992d014f7bafee87f30d78cf16ac902201160a1f9b18e135905906f0d805e8714a8a4a3bda8dea117dcef25c6562f9a3e
+    ReservedCode2: 304502203e5047fbe849e805d9e924bbfe05e6f68fe67521469ae0df29103f637ee032ee022100b354d9ee5cb991c60632485a09de4de09e5462bf603e26733d7e899a7799c3dc
+---
+
 # Changelog
 
 ## [3.6.1](https://github.com/alipay/alipay-sdk-nodejs-all/compare/v3.6.0...v3.6.1) (2023-09-21)

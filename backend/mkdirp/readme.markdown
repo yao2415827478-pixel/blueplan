@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100f69e534259f4566398204e8e5f4598176bc1d1af7f570ac84205d41a48a6ad65022030ee8f3679e8d846305d71e6e448d2a2b15523636a6768d768d24c70afcd23b7
+    ReservedCode2: 3045022100d483a8e666b92463d3875047a2f56f9062bb6667c275d41055af24d4415d532a022042442f711c9b06ab710d5ccf86ab28f4f7e70ca8fface290440a5a6da57c0d83
+---
+
 # mkdirp
 
 Like `mkdir -p`, but in node.js!

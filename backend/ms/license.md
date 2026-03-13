@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3046022100d3a93c270c4274c9939cb53f7315accc2e9a3b9d28df2e5ae1ca11be1b7bb04b022100d36e7303a8c7653e82001512761814e3b81e9f8b51a30fead2bfe018eaf7a38c
+    ReservedCode2: 3046022100cd3f4eb52aa0e71fe60504a919a813e9c3bade0fa34f7e6abe0c68c5e0214396022100ba652f3e1e564ea4080a14c863f965ef4a85f5f848fc10a021f01a19360d4441
+---
+
 The MIT License (MIT)
 
 Copyright (c) 2016 Zeit, Inc.

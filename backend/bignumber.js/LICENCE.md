@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022040f4cb0008ee199c3d4c3d9548ca84a0327d6d633ea86fe38135e72189f9fb43022100adebc851636e4cc7ffb3c98251d84433fb3220243be1df1e6853353ad80deef3
+    ReservedCode2: 30440220644f2cec0e89ba4982a4dfae68982253ed73be0bc47c707060a1e7993ed9694302201e3d7d73e4bd794e8f752c551da7359bb2b096bf1e092e6260d29d4528de9400
+---
+
 The MIT License (MIT)
 =====================
 

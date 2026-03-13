@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3044022043b0932a4f5017238cfdabb5cd751147ee9c241f7841e880ed8ba9d5b15ae29e022047c811550bef1e8b2b47ebdb785ee98053b14b44ba37bdbc5cd4fcfa36ecbab9
+    ReservedCode2: 3046022100efd827ef82170f4aa1e3dab449552c246fae6db6758b3491e9de8a4fe3c475a9022100fae637dbe200cd39ef03d6f4ec37d6be92f9f71d4819c6ce047d19cb76b77d55
+---
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.

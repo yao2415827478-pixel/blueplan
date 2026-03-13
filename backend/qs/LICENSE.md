@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100f3c75679580605178114826a343c56d4aba90b7039d8a8fbc9515ec6023198e802206f001c7bcfe42f7223e05b3a3afa0b63c18b06baa463f98c860321311a5e016d
+    ReservedCode2: 3046022100b538bb9b4401c28abc9210a45a09459a7b6c37bfa9ef19527fccd404a0c5622f022100f9775ccdd134c1d6be4685fb8be07993b535093b862b59f633517bb52816c9dd
+---
+
 BSD 3-Clause License
 
 Copyright (c) 2014, Nathan LaFreniere and other [contributors](https://github.com/ljharb/qs/graphs/contributors)

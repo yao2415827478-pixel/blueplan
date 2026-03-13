@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100c757c8de219ae9b4e23421743706e474152a8f12d9ae2740cd57303e84fbef3d022028734907187cc42cbd1aaadccf7524156b5b07de5c0c7b1cc10a1b00ab289d4c
+    ReservedCode2: 3045022031e030b326ba8f37e14ba276f28502fcc9327fd49531cc902268c5a18ef5ace3022100dc8ff66ea7e219d6a4c795ac68e9876b24bb42a14a9068124873fbc3cd2bfcbe
+---
+
 # safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
 
 [travis-image]: https://img.shields.io/travis/feross/safe-buffer/master.svg

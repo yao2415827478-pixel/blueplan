@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3046022100c894fac5882eea06f767635dbabc3e81e114ab4a4330eb777798d40d53bc9d39022100cc1f83d93b8d3e1e0009e9610e40fb723e8bf68f621453f3763de7e0fb10824f
+    ReservedCode2: 304402202791ed34d5b1439c6ab6271a47d30c341e64116ac95c8f79e08279b08e16914f022042aac7adaeadf4cdba5a0854b4cc783fabe14f00897d58b4a05cf02ae2283d41
+---
+
 # object-inspect <sup>[![Version Badge][npm-version-svg]][package-url]</sup>
 
 string representations of objects in node and the browser

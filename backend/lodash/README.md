@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304502206d80ba3c44ea5bbcb2373c4c2550891af0b19b784b6a38b00bdc379d3a8a87bc022100f77a865eef31610edd5bd0e21669c550b60264a1b299714ba24ba4519fbf59b6
+    ReservedCode2: 3045022100b6589fd8f5f427366b5223e2114c46d1c079ae8fa92d7317a5649933eb086c2b022055200032a5fb5a0eb83569c6d94bd623b87d6f280dd5dccbbc7e08beff73d9d1
+---
+
 # lodash v4.17.23
 
 The [Lodash](https://lodash.com/) library exported as [Node.js](https://nodejs.org/) modules.

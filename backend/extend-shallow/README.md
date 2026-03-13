@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30450221009ca844d22ff0d59b11b73fe1042e76c9b3c32518879ff875b760afd31cb323e802207592640772007ab71f68cd89ae9b5a51ab2a9509d132638bd1f70ce0c9371f72
+    ReservedCode2: 304502202896383bf6a82eb6c4e93a02239a2d6acb313530c095ccbe9dfd97f085596e2e022100cf6c4dcc72b8b5647293a5e10f77e19ce7873c3a6286162228925a9318b05874
+---
+
 # extend-shallow [![NPM version](https://badge.fury.io/js/extend-shallow.svg)](http://badge.fury.io/js/extend-shallow)  [![Build Status](https://travis-ci.org/jonschlinkert/extend-shallow.svg)](https://travis-ci.org/jonschlinkert/extend-shallow)
 
 > Extend an object with the properties of additional objects. node.js/javascript util.

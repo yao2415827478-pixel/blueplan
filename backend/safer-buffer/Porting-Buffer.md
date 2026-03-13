@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304402207eb314f711f84151d672d116e5fdb2cf02bb3bbe893ca864f4242a39d45564110220471047543a8298d4371ac6ae8be983ea2bd7585b928ea88fbb27f6197e55a2ee
+    ReservedCode2: 3044022052df486fc239917b96617500d8b709737fec089444a625e87ab12344d856d9f502201990d5861428132da5d0b32f8ca7bb0a93578a12ffc0b3d06856ab9a2a0ce210
+---
+
 # Porting to the Buffer.from/Buffer.alloc API
 
 <a id="overview"></a>

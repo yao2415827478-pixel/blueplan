@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304502204464c20f2b302895e89972f245c7df4462d2f6c8699fa08ac500dbfedb91ec25022100e0bc0a03b6def7a07b63c1495cdb0e060d416d0638860260bd08d3b5b33b9647
+    ReservedCode2: 3045022017f789501ca1d98545182f949a31f2886809eaa5e345b9cf98ce8909a07d2b32022100d20fbaaefe20efba4a499af223453dab5dd35ccb3f31c68390a0c7f8a9072482
+---
+
 # safer-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![javascript style guide][standard-image]][standard-url] [![Security Responsible Disclosure][secuirty-image]][secuirty-url]
 
 [travis-image]: https://travis-ci.org/ChALkeR/safer-buffer.svg?branch=master

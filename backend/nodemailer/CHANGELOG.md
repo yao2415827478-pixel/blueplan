@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3046022100c38f8a37f9ca3115932b10a4e3f1d9614832330c676c34bf997ee2aaa4a6a4b3022100d2a9343ef86fb1c31c7b469da6bcda04fc141f0fcc98ab4e8be27bd744ca3d8c
+    ReservedCode2: 304502202c01465cfb479367ce772e753d8eee2aef0e9b705e8b532ee7e0c4696ef058f0022100e3c0a7c9df01f9aa2f58a3a17e080fbf45302aa31a74446d9b057890b3add4a3
+---
+
 # CHANGELOG
 
 ## [6.10.1](https://github.com/nodemailer/nodemailer/compare/v6.10.0...v6.10.1) (2025-02-06)

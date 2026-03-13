@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3044022065fe41626c800a200eda70550a7d315c1cb35d73c658c6ef1e73f3f75f4860c102204184b017a194d14831d3afbba8c9b16a7b88019db1303f32559caffc8e757830
+    ReservedCode2: 3045022035ed8371b77dc59bf968e2a7cf12de9efdc5fc3a8455c18923ecd35122a60c86022100c0b972830e36c8d9ebef41b41146a3fbfb7fd3900ebc75fe482dd52cb7929515
+---
+
 # debug
 [![Build Status](https://travis-ci.org/visionmedia/debug.svg?branch=master)](https://travis-ci.org/visionmedia/debug)  [![Coverage Status](https://coveralls.io/repos/github/visionmedia/debug/badge.svg?branch=master)](https://coveralls.io/github/visionmedia/debug?branch=master)  [![Slack](https://visionmedia-community-slackin.now.sh/badge.svg)](https://visionmedia-community-slackin.now.sh/) [![OpenCollective](https://opencollective.com/debug/backers/badge.svg)](#backers) 
 [![OpenCollective](https://opencollective.com/debug/sponsors/badge.svg)](#sponsors)

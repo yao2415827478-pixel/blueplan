@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30460221009478946f0b6eb7292921adcad21025c9e95dc8959500c82a0fbd6f227da16c18022100d38f774be32bffb0550538643b81fc5497151d61fc45458215dd6db067916f13
+    ReservedCode2: 3045022100822110d110671af2aea4f91ecedc751ee936eda4cb421781c1544acf69a9ab52022028d032dc33c19f2ef6afe4edba75bcc4b08b22fa07b53e3ea1335006279af037
+---
+
 # unescape [![NPM version](https://img.shields.io/npm/v/unescape.svg?style=flat)](https://www.npmjs.com/package/unescape) [![NPM monthly downloads](https://img.shields.io/npm/dm/unescape.svg?style=flat)](https://npmjs.org/package/unescape) [![NPM total downloads](https://img.shields.io/npm/dt/unescape.svg?style=flat)](https://npmjs.org/package/unescape) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/unescape.svg?style=flat&label=Travis)](https://travis-ci.org/jonschlinkert/unescape)
 
 > Convert HTML entities to HTML characters, e.g. `&gt;` converts to `>`.

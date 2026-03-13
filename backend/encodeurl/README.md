@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 304502204f5e1718c3000a70f38d83d8cf14e728b28c59a979e0cecaae1f7e485d838b20022100e66418f28cbc6785ed0dc699fe8a4ba2e3fac0fc4954ae7a8f6df12020599d10
+    ReservedCode2: 3045022100d5ab4271ec311b578f7c791c71a2366319931e88f9acce0127d6d17b4de7f30902203a7f18bd485ed3583abd000ecedb5d32321c5ed50beb04f09522b3d30edc48d1
+---
+
 # Encode URL
 
 Encode a URL to a percent-encoded form, excluding already-encoded sequences.

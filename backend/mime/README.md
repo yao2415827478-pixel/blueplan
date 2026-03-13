@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30450220661c2cceee52efeb76dda6715b67affaf5ae6f6fa724dcaff43900f7a94ee851022100eaa1c5a280ba3a1a4b9804a0539fdc442bb1ad04f0b792f1b4404ad807b49f17
+    ReservedCode2: 304502200b11033141e9437239a8ec06088b28db72830b28dcf6fd41f7f02c9b09397587022100d932662adb670b4bdb5090aa3e61887b8bacdf0e7f5d2e2a3b1baf244d64d508
+---
+
 # mime
 
 Comprehensive MIME type mapping API based on mime-db module.
